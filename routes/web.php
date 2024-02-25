@@ -19,7 +19,7 @@ use App\Http\Controllers\EquipementController;
 |
 */
 
-Route::get('/', function () {
+Route::get('accueil', function () {
     return view('accueil');
 });
 Route::resource('ferrys', FerrysController::class);
