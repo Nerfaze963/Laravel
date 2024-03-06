@@ -52,7 +52,7 @@ class FerrysController extends Controller
         } 
        
         $ferry->save();
-        $ferry->Equipement()->attach($ferryRequest->equipements);
+        $ferry->equipement()->attach($ferryRequest->equipement_id);
         return redirect()->route('ferrys.index')->with('info', "le bateau a bien été créé");
     }
 
