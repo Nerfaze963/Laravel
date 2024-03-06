@@ -2,6 +2,7 @@
 
 @section('contenu')
 <div class ="card">
+    {{-- @dd($ferry); --}}
     <header class="card-header">
         <p class = "card-header-title">
             <img src="../images/{{$ferry->photo}}">
@@ -17,7 +18,7 @@
     </div>
 <p>liste des equipements</p>
     <ul>
-        @foreach($equipements as $equipement)
+        @foreach($ferry->equipement as $equipement)
         <li>{{$equipement->libelle}}</li>
         @endforeach
     </ul>

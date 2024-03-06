@@ -11,7 +11,7 @@ class Ferrys extends Model
 {
     use HasFactory;
     protected $fillable =['nom','photo','longueur','largeur','vitesse'];
-    public function Equipement(): BelongsToMany
+    public function equipement(): BelongsToMany
     {
         return $this->BelongsToMany (Equipement::class);
     }
