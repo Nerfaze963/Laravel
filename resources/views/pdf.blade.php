@@ -35,15 +35,18 @@
                 
             </tr>
             @foreach($ferrys as $ferry)
-            <tr>
-                <p> {{$ferry->nom}}</p>
-                <p> {{$ferry->longueur}}</p>
-                <p> {{$ferry->largeur}}</p>
-                <p> {{$ferry->vitesse}}</p>
-                 <td>{{$equipement->slug}}</td> 
-
-            </tr>
+    <tr>
+        <td>{{$ferry->nom}}</td>
+        <td>{{$ferry->longueur}}</td>
+        <td>{{$ferry->largeur}}</td>
+        <td>{{$ferry->vitesse}}</td>
+        <td>
+            @foreach($ferry->equipement as $equipement)
+                {{$equipement->libelle}}
             @endforeach
+        </td>
+    </tr>
+@endforeach
         </table>
     </p>
 </body>

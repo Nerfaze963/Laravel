@@ -15,6 +15,9 @@
         @method('CREATE')
         <button class="btn btn-danger" >Ajouter</button>
     </form></td>
+    <div class="d-flex justify-content-center mt-3">
+        <a href="{{route('pdf')}}" class="btn btn-outline-primary">Générer un PDF</a>
+    </div>
 
 
 </div>

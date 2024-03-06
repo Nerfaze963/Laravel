@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\FerryRequest;
 use App\Models\{Ferrys,Equipement};
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\DB;
+
+
 
 
 class FerrysController extends Controller
@@ -88,6 +92,22 @@ class FerrysController extends Controller
     {
         $ferry->delete();
         return back()->with('info',"le bateau a été supprimé");
+    }
+
+
+    public function creerPDF(){
+        $ferrys = Ferrys::all();
+        
+        
+            $data =[
+                'titre'=>'Liste des ferrys',
+                'date'=> date("d/m/y"),
+                'ferrys'=>$ferrys,
+
+            ];
+
+            $pdf =PDF::loadView('pdf',$data);
+            return $pdf->download('ferrys_pdf.pdf');
     }
 }
 
