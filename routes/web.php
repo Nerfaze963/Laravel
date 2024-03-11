@@ -19,15 +19,15 @@ use App\Http\Controllers\EquipementController;
 |
 */
 
-Route::get('accueil', function () {
+Route::get('/', function () {
     return view('accueil');
-});
+})->middleware(['auth', 'verified'])->name('accueil');;
 Route::resource('ferrys', FerrysController::class);
 Route::resource('equipement', EquipementController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');;
 
 
 

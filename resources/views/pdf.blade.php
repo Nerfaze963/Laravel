@@ -6,22 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Liste des bateaux</title>
     <style>
-        table{
-            border-collapse: collapse;
+       
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
         }
-        th{
-            border: 1px solid black;
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h3 {
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
             padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
             font-weight: bold;
         }
-        td{
-            border: 1px solid black;
-            padding: 5px; 
+        td {
+            background-color: #fff;
         }
     </style>
 
 </head>
 <body>
+
+   
+
     <h1>{{$titre}}</h1>
     <h3> Date: {{$date}}</h3>
     <p>
