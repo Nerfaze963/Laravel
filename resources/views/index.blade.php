@@ -88,7 +88,7 @@
         <h1>Les Ferrys</h1>
         <form action="{{ route('ferrys.create') }}">
             @csrf
-            <button class="btn btn-danger">Ajouter</button>
+            <button class="btn btn-success">Ajouter</button>
         </form>
         <div class="mt-3">
             <a href="{{ route('pdf') }}" class="btn btn-outline-primary">Générer un PDF</a>
@@ -111,6 +111,8 @@
                         <td>
                             <div class="d-flex">
                                 <a href="{{ route('ferrys.show', $ferry->id) }}" class="btn btn-primary me-2">Voir</a>
+                                {{-- <a href="{{ route('ferrys.edit', $ferry->id) }}" class="btn btn-warning me-2">Modifier</a> --}}
+
                                 <form action="{{ route('ferrys.destroy', $ferry->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')

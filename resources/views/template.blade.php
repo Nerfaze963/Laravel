@@ -158,7 +158,7 @@ ul {
 .show-body {
     margin: 0;
     padding: 0;
-    background-image: url('https://partir.ouest-france.fr/magazine/wp-content/uploads/2022/09/unvgvo2cs7k.jpg');
+    background-image: url('https://www.thoughtco.com/thmb/fXGK_2MrtyPlx6kFx1ps9EKUc1w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-142116239-5b4f993746e0fb00374d54fd.jpg');
     background-size: cover;
     background-position: center;
 }
