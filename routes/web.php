@@ -21,24 +21,19 @@ use App\Http\Controllers\EquipementController;
 
 Route::get('/', function () {
     return view('accueil');
-})->middleware(['auth', 'verified'])->name('accueil');;
+})->name('accueil');
+
+Route::middleware(['auth', 'verified'])->group(function(){
 Route::resource('ferrys', FerrysController::class);
 Route::resource('equipement', EquipementController::class);
-
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');;
-
-
-
-
-Route::middleware('auth')->group(function () {
+})->name('dashboard');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
 Route::get('/pdf',[FerrysController::class,'creerPDF'])->name("pdf");
 
-
+});
 
 require __DIR__.'/auth.php';

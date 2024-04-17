@@ -111,12 +111,11 @@
                         <td>
                             <div class="d-flex">
                                 <a href="{{ route('ferrys.show', $ferry->id) }}" class="btn btn-primary me-2">Voir</a>
-                                {{-- <a href="{{ route('ferrys.edit', $ferry->id) }}" class="btn btn-warning me-2">Modifier</a> --}}
 
                                 <form action="{{ route('ferrys.destroy', $ferry->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-danger" type="submit">Supprimer</button>
+                                    <button class="btn btn-danger me-2" type="submit">Supprimer</button>
                                 </form>
                             </div>
                         </td>

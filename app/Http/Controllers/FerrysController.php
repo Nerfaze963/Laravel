@@ -74,8 +74,7 @@ class FerrysController extends Controller
      */
     public function edit(Ferrys $ferry) : View
     {
-        // $equipements = Equipement::all();
-        // return view('edit', compact('ferry','equipements'));
+        //
     }
 
     /**
@@ -83,19 +82,7 @@ class FerrysController extends Controller
      */
     public function update(FerryRequest $ferryRequest, Ferrys $ferry) : RedirectResponse
     {
-        // $ferryRequest->file("photo")->getPathname();
-        // $imageName=time().'.'.$ferryRequest->photo->extension();
-        // $ferryRequest->photo->move(public_path('images'),$imageName);
-
-        // $ferry->nom =$ferryRequest->input('nom');
-        // $ferry->longueur = $ferryRequest->input('longueur');
-        // $ferry->largeur = $ferryRequest->input('largeur');    
-        // $ferry->vitesse = $ferryRequest->input('vitesse');
-        // $ferry->photo = $imageName;
-        // $ferry->save();
-
-        // return redirect()->route('ferrys.index')->with('info', "le bateau a bien été modifié");
-
+       //
     }
 
     /**

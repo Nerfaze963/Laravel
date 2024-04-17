@@ -40,35 +40,23 @@
 
 </head>
 <body>
-
-   
-
-    <h1>{{$titre}}</h1>
-    <h3> Date: {{$date}}</h3>
-    <p>
-        <table>
-            <tr>
-                <th>Nom</th>
-                <th>longueur</th>
-                <th>largeur</th>
-                <th>vitesse</th>
-                <th>equipement</th>
-                
-            </tr>
-            @foreach($ferrys as $ferry)
-    <tr>
-        <td>{{$ferry->nom}}</td>
-        <td>{{$ferry->longueur}}</td>
-        <td>{{$ferry->largeur}}</td>
-        <td>{{$ferry->vitesse}}</td>
-        <td>
-            @foreach($ferry->equipement as $equipement)
-                {{$equipement->libelle}}
-            @endforeach
-        </td>
-    </tr>
-@endforeach
-        </table>
-    </p>
+<h1>{{$titre}}</h1>
+<h3>{{$date}}</h3>
+<hr />
+@foreach($ferrys as $ferry)
+<section>
+    <h2>{{$ferry->nom}}</h2>
+    <img src="images/{{$ferry->photo}}">
+    <p>Longueur : {{$ferry->longueur}}m</p>
+    <p>Largeur : {{$ferry->largeur}}m</p>
+    <p>Vitesse : {{$ferry->vitesse}}noeuds</p>
+    <p><u>Liste des équipements </u></p>
+    <ul>
+        @foreach ($ferry->equipement as $equipement)
+            <li>{{$equipement->libelle}}</li>
+        @endforeach
+    </ul>
 </body>
+</section>
+@endforeach
 </html>
